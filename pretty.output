@@ -1,0 +1,22 @@
+Feature: The Dresses tab # features/features/Dresses_Tab/Dresses_Tab.feature:1
+
+  @dress
+  Scenario: User can navigate to Dresses page            # features/features/Dresses_Tab/Dresses_Tab.feature:4
+    Given I have navigated to the main page              # common/given.py:12
+    When I click on the DRESSES button                   # features/steps/Dresses_Tab/Dresses_Tab.py:13
+    Then The page titled "Dresses - My Store" has loaded # common/then.py:12
+
+Feature: The Women tab # features/features/Women_Tab/Women_Tab.feature:1
+
+  Scenario: User can navigate to Women page            # features/features/Women_Tab/Women_Tab.feature:3
+    Given I have navigated to the main page            # None
+    When I click on the WOMEN button                   # None
+    Then The page titled "Women - My Store" has loaded # None
+
+  @test
+  Scenario: User can navigate to Women/Tops page      # features/features/Women_Tab/Women_Tab.feature:10
+    Given I have navigated to the main page           # common/given.py:12
+    When I hover over the WOMEN button                # features/steps/Women_Tab/Women_Tab.py:19
+    And I click on the TOPS header                    # features/steps/Women_Tab/Women_Tab.py:26
+    Then The page titled "Tops - My Store" has loaded # common/then.py:12
+

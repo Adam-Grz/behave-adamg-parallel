@@ -1,0 +1,14 @@
+<testsuite errors="0" failures="0" hostname="i-10litc0stvfc" name="features.Dresses_Tab.Dresses_Tab.The Dresses tab" skipped="0" tests="1" time="11.053648" timestamp="2019-03-18T15:12:45.239810"><testcase classname="features.Dresses_Tab.Dresses_Tab.The Dresses tab" name="User can navigate to Dresses page" status="passed" time="11.053648"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @dress
+  Scenario: User can navigate to Dresses page
+    Given I have navigated to the main page ... passed in 5.608s
+    When I click on the DRESSES button ... passed in 5.408s
+    Then The page titled "Dresses - My Store" has loaded ... passed in 0.037s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

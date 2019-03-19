@@ -1,0 +1,32 @@
+Feature: The Dresses tab
+
+  Scenario: User can navigate to Dresses page
+    Given I have navigated to the main page ... passed in 5.608s
+    When I click on the DRESSES button ... passed in 5.408s
+    Then The page titled "Dresses - My Store" has loaded ... passed in 0.037s
+
+Feature: The Women tab
+
+  Scenario: User can navigate to Women page
+    Given I have navigated to the main page ... passed in 4.925s
+    When I click on the WOMEN button ... passed in 4.303s
+    Then The page titled "Women - My Store" has loaded ... passed in 0.050s
+
+  Scenario: User can navigate to Women/Tops page
+    Given I have navigated to the main page ... passed in 3.842s
+    When I hover over the WOMEN button ... failed in 5.264s
+Traceback (most recent call last):
+  File "c:\users\mbcx6ag2\appdata\local\programs\python\python37-32\lib\site-packages\behave\model.py", line 1329, in run
+    match.run(runner.context)
+  File "c:\users\mbcx6ag2\appdata\local\programs\python\python37-32\lib\site-packages\behave\matchers.py", line 98, in run
+    self.func(context, *args, **kwargs)
+  File "C:\0\features\steps\Women_Tab\Women_Tab.py", line 24, in i_click_women_button
+    visibilityXP(context, e["TOPS_hover"])
+  File "C:\0\shortcuts\ECs\ecs.py", line 15, in visibilityXP
+    return context.wait.until(EC.visibility_of_element_located((By.XPATH, xpath)))
+  File "c:\users\mbcx6ag2\appdata\local\programs\python\python37-32\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+
+
