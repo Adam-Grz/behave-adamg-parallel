@@ -73,7 +73,7 @@ def reporter():
 					blue_features = 0
 					green_features = 0
 					scen_details = f"""
-<tr><td style=\"background-color:lightyellow\"><h4>{src_good[a][0]}</h4></td>
+<tr><td style=\"background-color:lightyellow\" width=\"85%\" align=\"center\"><i><b><h4>{src_good[a][0]}</i></b></h4></td>
 <!-- SCENARIO RESULT --><td></td></tr>
 									"""
 					for e in range(1, len(src_good[a])):
@@ -124,7 +124,7 @@ def reporter():
 					
 					for line in range(0,len(aa)):
 						if "<!-- SCENARIO RESULT --><td></td></tr>" in aa[line]:
-							aa[line] = f"<!-- SCENARIO RESULT --><td {mark_scenario}></td></tr>"
+							aa[line] = f"<!-- SCENARIO RESULT --><td width=\"15%\" {mark_scenario}></td></tr>"
 					
 					final_details = "\n".join(aa)
 
@@ -162,9 +162,11 @@ def reporter():
 						line = line + f"""   
 										<table width="100%">     
 										<hr>
-								        <h3 id="{str(counter)}">Feature: {feature_title}</h3>
+								        <h3 id="{str(counter)}">Feature: {feature_title}</h3><h5><a href=\"#menu\">  |  back to Menu</a></h5>
 								        {final_details}
 								        </table>
 								        """
 					dst.write(line)
 		counter += 1
+	with open('foldername.txt', 'w') as ff:
+		ff.write(f'TestReports/{datetime}')

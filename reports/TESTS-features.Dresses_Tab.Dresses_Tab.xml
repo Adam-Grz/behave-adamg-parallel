@@ -1,14 +1,53 @@
-<testsuite errors="0" failures="0" hostname="i-10litc0stvfc" name="features.Dresses_Tab.Dresses_Tab.The Dresses tab" skipped="0" tests="1" time="11.053648" timestamp="2019-03-18T15:12:45.239810"><testcase classname="features.Dresses_Tab.Dresses_Tab.The Dresses tab" name="User can navigate to Dresses page" status="passed" time="11.053648"><system-out>
+<testsuite errors="0" failures="0" hostname="i-10litc0stvfc" name="features.Dresses_Tab.Dresses_Tab.The Dresses tab" skipped="0" tests="3" time="21.807066" timestamp="2019-03-20T10:02:51.431410"><testcase classname="features.Dresses_Tab.Dresses_Tab.The Dresses tab" name="User can navigate to Dresses page" status="passed" time="7.988487"><system-out>
 <![CDATA[
 @scenario.begin
 
   @dress
   Scenario: User can navigate to Dresses page
-    Given I have navigated to the main page ... passed in 5.608s
-    When I click on the DRESSES button ... passed in 5.408s
-    Then The page titled "Dresses - My Store" has loaded ... passed in 0.037s
+    Given I have navigated to the main page ... passed in 5.338s
+    When I click on the DRESSES button ... passed in 2.619s
+    Then The page titled "Dresses - My Store" has loaded ... passed in 0.031s
 
 @scenario.end
 --------------------------------------------------------------------------------
+
+Captured stdout:
+Dresses - My Store
+Dresses - My Store
+
+]]>
+</system-out></testcase><testcase classname="features.Dresses_Tab.Dresses_Tab.The Dresses tab" name="User can navigate to Casual Dresses page" status="passed" time="6.751336"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: User can navigate to Casual Dresses page
+    Given I have navigated to the main page ... passed in 3.420s
+    When I click on the DRESSES button ... passed in 1.734s
+    And I click on the CASUAL_DRESSES button ... passed in 1.567s
+    Then The page titled "Casual Dresses - My Store" has loaded ... passed in 0.030s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+Casual Dresses - My Store
+Casual Dresses - My Store
+
+]]>
+</system-out></testcase><testcase classname="features.Dresses_Tab.Dresses_Tab.The Dresses tab" name="User can navigate to Evening Dresses page" status="passed" time="7.067243"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: User can navigate to Evening Dresses page
+    Given I have navigated to the main page ... passed in 3.557s
+    When I click on the DRESSES button ... passed in 1.992s
+    And I click on the EVENING_DRESSES button ... passed in 1.486s
+    Then The page titled "Evening Dresses - My Store" has loaded ... passed in 0.032s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+Evening Dresses - My Store
+Evening Dresses - My Store
+
 ]]>
 </system-out></testcase></testsuite>

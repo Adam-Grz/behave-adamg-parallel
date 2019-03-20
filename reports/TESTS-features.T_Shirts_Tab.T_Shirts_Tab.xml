@@ -1,0 +1,37 @@
+<testsuite errors="0" failures="0" hostname="i-10litc0stvfc" name="features.T_Shirts_Tab.T_Shirts_Tab.The T-Shirts tab" skipped="0" tests="2" time="12.383759" timestamp="2019-03-20T10:03:21.042796"><testcase classname="features.T_Shirts_Tab.T_Shirts_Tab.The T-Shirts tab" name="User can navigate to T-Shirts page" status="passed" time="5.553731"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: User can navigate to T-Shirts page
+    Given I have navigated to the main page ... passed in 3.588s
+    When I click on the T_SHIRTS button ... passed in 1.926s
+    Then The page titled "T-shirts - My Store" has loaded ... passed in 0.040s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+T-shirts - My Store
+T-shirts - My Store
+
+]]>
+</system-out></testcase><testcase classname="features.T_Shirts_Tab.T_Shirts_Tab.The T-Shirts tab" name="User can navigate to Faded T-Shirt page" status="passed" time="6.830028"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: User can navigate to Faded T-Shirt page
+    Given I have navigated to the main page ... passed in 3.171s
+    When I click on the T_SHIRTS button ... passed in 1.560s
+    Then The page titled "T-shirts - My Store" has loaded ... passed in 0.022s
+    When I click on the FADED T_SHIRT button ... passed in 2.057s
+    Then The page titled "Faded Short Sleeve T-shirts - My Store" has loaded ... passed in 0.020s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+T-shirts - My Store
+T-shirts - My Store
+Faded Short Sleeve T-shirts - My Store
+Faded Short Sleeve T-shirts - My Store
+
+]]>
+</system-out></testcase></testsuite>

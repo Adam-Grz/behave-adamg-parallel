@@ -1,28 +1,54 @@
 Feature: The Dresses tab
 
   Scenario: User can navigate to Dresses page
-    Given I have navigated to the main page ... passed in 5.608s
-    When I click on the DRESSES button ... passed in 5.408s
-    Then The page titled "Dresses - My Store" has loaded ... passed in 0.037s
+    Given I have navigated to the main page ... passed in 5.338s
+    When I click on the DRESSES button ... passed in 2.619s
+    Then The page titled "Dresses - My Store" has loaded ... passed in 0.031s
+
+  Scenario: User can navigate to Casual Dresses page
+    Given I have navigated to the main page ... passed in 3.420s
+    When I click on the DRESSES button ... passed in 1.734s
+    And I click on the CASUAL_DRESSES button ... passed in 1.567s
+    Then The page titled "Casual Dresses - My Store" has loaded ... passed in 0.030s
+
+  Scenario: User can navigate to Evening Dresses page
+    Given I have navigated to the main page ... passed in 3.557s
+    When I click on the DRESSES button ... passed in 1.992s
+    And I click on the EVENING_DRESSES button ... passed in 1.486s
+    Then The page titled "Evening Dresses - My Store" has loaded ... passed in 0.032s
+
+Feature: The T-Shirts tab
+
+  Scenario: User can navigate to T-Shirts page
+    Given I have navigated to the main page ... passed in 3.588s
+    When I click on the T_SHIRTS button ... passed in 1.926s
+    Then The page titled "T-shirts - My Store" has loaded ... passed in 0.040s
+
+  Scenario: User can navigate to Faded T-Shirt page
+    Given I have navigated to the main page ... passed in 3.171s
+    When I click on the T_SHIRTS button ... passed in 1.560s
+    Then The page titled "T-shirts - My Store" has loaded ... passed in 0.022s
+    When I click on the FADED T_SHIRT button ... passed in 2.057s
+    Then The page titled "Faded Short Sleeve T-shirts - My Store" has loaded ... passed in 0.020s
 
 Feature: The Women tab
 
   Scenario: User can navigate to Women page
-    Given I have navigated to the main page ... passed in 4.925s
-    When I click on the WOMEN button ... passed in 4.303s
-    Then The page titled "Women - My Store" has loaded ... passed in 0.050s
+    Given I have navigated to the main page ... passed in 3.205s
+    When I click on the WOMEN button ... passed in 2.028s
+    Then The page titled "Women - My Store" has loaded ... passed in 0.039s
 
   Scenario: User can navigate to Women/Tops page
-    Given I have navigated to the main page ... passed in 3.842s
-    When I hover over the WOMEN button ... failed in 5.264s
+    Given I have navigated to the main page ... passed in 3.748s
+    When I hover over the WOMEN button ... failed in 5.157s
 Traceback (most recent call last):
   File "c:\users\mbcx6ag2\appdata\local\programs\python\python37-32\lib\site-packages\behave\model.py", line 1329, in run
     match.run(runner.context)
   File "c:\users\mbcx6ag2\appdata\local\programs\python\python37-32\lib\site-packages\behave\matchers.py", line 98, in run
     self.func(context, *args, **kwargs)
-  File "C:\0\features\steps\Women_Tab\Women_Tab.py", line 24, in i_click_women_button
+  File "C:\01\features\steps\Women_Tab\Women_Tab.py", line 24, in i_click_women_button
     visibilityXP(context, e["TOPS_hover"])
-  File "C:\0\shortcuts\ECs\ecs.py", line 15, in visibilityXP
+  File "C:\01\shortcuts\ECs\ecs.py", line 15, in visibilityXP
     return context.wait.until(EC.visibility_of_element_located((By.XPATH, xpath)))
   File "c:\users\mbcx6ag2\appdata\local\programs\python\python37-32\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
     raise TimeoutException(message, screen, stacktrace)

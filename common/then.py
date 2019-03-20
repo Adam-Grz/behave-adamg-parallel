@@ -13,4 +13,6 @@ from shortcuts.finds.plural import (findIDs,
 def page_titled_title_has_loaded(context, title):
     presenceXP(context, "//head/title")
     page_title = findXP(context, "//head/title").get_attribute("innerHTML")
+    print(f"{page_title}")
+    print(f"{title}")
     assert title in page_title
