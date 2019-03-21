@@ -1,28 +1,28 @@
 import subprocess
 from shutil import copy
 import re
+import os
+import glob
+
+files = glob.glob('/reports/*')
+for f in files:
+    os.remove(f)
+
+try:
+	os.remove("behave.ini")
+except (FileNotFoundError) as e:
+	pass
+
 
 copy("chrome.ini", "behave.ini")
-proc = subprocess.run("behave", stdout=subprocess.PIPE)
 
-output = str(proc.stdout)
-with open("proc_output.txt", "w") as otp:
-	otp.write(output)
-took = output[output.index("Took"):]
-took = took[:-5]
+features = {}
 
-with open('foldername.txt', 'r') as fn:
-	path = fn.readline()
+for dirpath, dirnames, filenames in os.walk("."):
+	for filename in [f for f in filenames if f.endswith(".feature")]:
+		features[f"{dirpath}"] = f"{filename}"
 
-lines = ""
+for index, (key, value) in enumerate(features.items()):
+	proc1 = os.system(f"start /b behave {key} > {value.split('.')[0]}.txt")
+	print(f"Process {index+1} started...")
 
-with open (f'{path}/index.html', 'r') as html:
-	lines = html.readlines()
-	with open (f'{path}/index.html', 'w') as html2:
-		for i, line in enumerate(lines):
-			if "<h1>Test run" in line:
-				line = line + f"<h2>{took}</h2>"
-				lines[i] = line
-				break
-		lines = "".join(lines)
-		html2.write(lines)	

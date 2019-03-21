@@ -170,3 +170,5 @@ def reporter():
 		counter += 1
 	with open('foldername.txt', 'w') as ff:
 		ff.write(f'TestReports/{datetime}')
+
+reporter()

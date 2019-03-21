@@ -1,22 +1,17 @@
-Feature: The Dresses tab # features/features/Dresses_Tab/Dresses_Tab.feature:1
-
-  @dress
-  Scenario: User can navigate to Dresses page            # features/features/Dresses_Tab/Dresses_Tab.feature:4
-    Given I have navigated to the main page              # common/given.py:12
-    When I click on the DRESSES button                   # features/steps/Dresses_Tab/Dresses_Tab.py:13
-    Then The page titled "Dresses - My Store" has loaded # common/then.py:12
-
 Feature: The Women tab # features/features/Women_Tab/Women_Tab.feature:1
 
-  Scenario: User can navigate to Women page            # features/features/Women_Tab/Women_Tab.feature:3
-    Given I have navigated to the main page            # None
-    When I click on the WOMEN button                   # None
-    Then The page titled "Women - My Store" has loaded # None
-
+  Scena
+  Scenario: User can navigate to T-Shirts page            # features/features/T_Shirts_Tab/T_Shirts_Tab.feature:3
+    Given I have navigated to the main page               #    When I click on t    When I click on the T_SHIRTS button                   # features/steps/T_S    Then The page titled "Wome    Then The page titled "T-shirts - My Store"
   @test
-  Scenario: User can navigate to Women/Tops page      # features/features/Women_Tab/Women_Tab.feature:10
-    Given I have navigated to the main page           # common/given.py:12
-    When I hover over the WOMEN button                # features/steps/Women_Tab/Women_Tab.py:19
-    And I click on the TOPS header                    # features/steps/Women_Tab/Women_Tab.py:26
-    Then The page titled "Tops - My Store" has loaded # common/then.py:12
+  Scenario: User can n
+  Scenario: User can navigate to Faded T-Shirt page                          # features/features/T_Shirts_Tab/T_Shirts_Tab.feature:10
+    Given I have naviga    When I hover over the WOMEN button                # features/steps/Women    When I click on the T_SHIRTS button                                      # features/steps/T_Shirts_Tab/T_Shirts_Tab.    The    Then The page titled "T-shirts - My Store" has loaded           
+       # common/then.py:12
+    When I click on the FADED T_SHIRT button           
+  Scenario: User can navigate to Evening Dresses page            # features/features/Dresses_Tab/Dresses_Tab.feature:17
+    Given I have navigated to the main page                      # common/given.py:12
+    When I click on the DRESSES button                           # features/steps/Dresses_Tab/Dresses_Tab.py:13
+    And I click on the EVENING_DRESSES button                    # features/steps/Dresses_Tab/Dresses_Tab.py:23
+    Then The page titled "Evening Dresses - My Store" has loaded # common/then.py:12
 
