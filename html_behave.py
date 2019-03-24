@@ -2,6 +2,7 @@ import os
 from distutils.dir_util import copy_tree
 from time import gmtime, strftime
 import re
+from glob import glob
 from utils.matplotlib import (steps_chart,
 							  scens_chart,
 							  feats_chart)
@@ -33,6 +34,7 @@ def reporter():
 	red_fs = 0
 	blue_fs = 0
 	green_fs = 0
+	feats_chart_done = False
 
 	for file in report_files:
 		with open(f"{toDirectory}/index.html", 'r') as rl:
@@ -108,12 +110,14 @@ def reporter():
 						mark_scenario = "style=\"background-color:green\""
 
 					# Gather feature results for the pie chart
-					if red_scenarios > 0:
-						red_features += 1
-					if blue_scenarios > 0 and red_scenarios == 0:
-						blue_features += 1
-					if green_scenarios > 0 and blue_scenarios == 0 and red_scenarios == 0:
-						green_features += 1
+					if not feats_chart_done:
+						for file in glob('console_output/*.txt'):
+							with open(file, 'rb+') as f:
+								data = str(f.read())
+								if "Traceback" in data:
+									red_fs += 1
+								else: green_fs += 1
+						feats_chart_done = True
 
 					steps_chart(green_steps, blue_steps, red_steps, f"TestReports/{datetime}")
 					scens_chart(green_scenarios, blue_scenarios, red_scenarios, f"TestReports/{datetime}")
@@ -127,13 +131,6 @@ def reporter():
 							aa[line] = f"<!-- SCENARIO RESULT --><td width=\"15%\" {mark_scenario}></td></tr>"
 					
 					final_details = "\n".join(aa)
-
-				if red_features > 0:
-					red_fs += 1
-				if blue_features > 0:
-					blue_fs += 1
-				if green_features > 0:
-					green_fs += 1
 
 				feats_chart(green_fs, blue_fs, red_fs, f"TestReports/{datetime}")
 
@@ -168,7 +165,5 @@ def reporter():
 								        """
 					dst.write(line)
 		counter += 1
-	with open('foldername.txt', 'w') as ff:
-		ff.write(f'TestReports/{datetime}')
 
 reporter()

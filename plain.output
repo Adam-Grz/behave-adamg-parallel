@@ -1,27 +1,7 @@
-Feature: The Dresses tab
+Feature: The Test Cases
 
-  Scenario: User can navigate to Dresses page
-    Given I have navigated to the main page ... passed in 6.345s
-    When I click on the DRESSES button ... passed in 5.803s
-    Then The page titled "Dresses - My Store" has loaded ... passed in 0.041s
-
-  Scenario: User can navigate to Casual Dresses page
-    Given I have navigated to the main page ... passed in 5.076s
-    When I click on the DRESSES button ... passed in 2.411s
-    And I click on the CASUAL_DRESSES button ... passed in 2.304s
-    Then The page titled "Casual Dresses - My Store" has loaded ... passed in 0.026s
-
-  Scenario: User can navigate to Evening Dresses page
-    Given I have navigated to the main page ... passed in 3.545s
-    When I click on the DRESSES button ... passed in 1.882s
-    And I click on the EVENING_DRESSES button ... passed in 2.264s
-    Then The page titled "Evening Dresses - My Store" has loaded ... passed in 0.035s
-
-cuts\ECs\ecs.py", line 15, in visibilityXP
-    return context.wait.until(EC.visibility_of_element_located((By.XPATH, xpath)))
-  File "c:\users\mbcx6ag2\appdata\local\programs\python\python37-32\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
-    raise TimeoutException(message, screen, stacktrace)
-selenium.common.exceptions.TimeoutException: Message: 
-
-
+  Scenario: User can navigate to Test Cases page
+    Given I have navigated to the main page ... passed in 17.465s
+    When I click on the TEST_CASES button ... passed in 8.090s
+    Then The page titled "Test Cases – Automation Practice Site" has loaded ... passed in 0.070s
 

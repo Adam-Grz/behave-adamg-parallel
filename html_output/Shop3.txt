@@ -1,0 +1,11 @@
+Feature: Shop # features/features/Shop2/Shop3.feature:1
+
+  Scenario: User can navigate to Shop page                                # features/features/Shop2/Shop3.feature:3
+    Given I have navigated to the main page                               # common/given.py:12
+    When I click on the SHOP2 button                                      # features/steps/Shop2/Shop2.py:13
+    Then The page titled "Products – Automation Practice Site" has loaded # common/then.py:12
+
+1 feature passed, 0 failed, 0 skipped
+1 scenario passed, 0 failed, 0 skipped
+3 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m47.350s

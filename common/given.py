@@ -11,4 +11,4 @@ from shortcuts.finds.plural import (findIDs,
 
 @given("I have navigated to the main page")
 def navigated_to_main_page(context):
-    context.driver.get("http://automationpractice.com/index.php")
+    context.driver.get("http://practice.automationtesting.in")

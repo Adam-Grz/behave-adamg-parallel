@@ -12,3 +12,8 @@
 [0319/122124.776:ERROR:exception_snapshot_win.cc(98)] thread ID 17132 not found in process
 [0320/122147.971:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
 [0320/122148.089:ERROR:exception_snapshot_win.cc(98)] thread ID 10940 not found in process
+[0324/143520.603:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0324/143542.452:ERROR:process_info.cc(329)] VirtualQueryEx: Access is denied. (0x5)
+[0324/143542.453:ERROR:process_info.cc(550)] ReadMemoryInfo failed
+[0324/143542.453:ERROR:process_memory_win.cc(39)] Failed to initialize ProcessInfo.
+[0324/143542.453:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)

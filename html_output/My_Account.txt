@@ -1,0 +1,24 @@
+Feature: My Account # features/features/My_Account/My_Account.feature:1
+
+  Scenario: User can navigate to Contact us page                            # features/features/My_Account/My_Account.feature:3
+    Given I have navigated to the main page                                 # common/given.py:12
+    When I click on the MY_ACCOUNT button                                   # features/steps/My_Account/My_Account.py:13
+    Then The page titled "My Account – Automation Practice Site" has loaded # common/then.py:12
+      Traceback (most recent call last):
+        File "c:\users\mbcx6ag2\appdata\local\programs\python\python37-32\lib\site-packages\behave\model.py", line 1329, in run
+          match.run(runner.context)
+        File "c:\users\mbcx6ag2\appdata\local\programs\python\python37-32\lib\site-packages\behave\matchers.py", line 98, in run
+          self.func(context, *args, **kwargs)
+        File "C:\01\common\then.py", line 18, in page_titled_title_has_loaded
+          assert title in page_title
+      AssertionError
+
+
+
+Failing scenarios:
+  features/features/My_Account/My_Account.feature:3  User can navigate to Contact us page
+
+0 features passed, 1 failed, 0 skipped
+0 scenarios passed, 1 failed, 0 skipped
+2 steps passed, 1 failed, 0 skipped, 0 undefined
+Took 0m21.938s

@@ -1,0 +1,11 @@
+Feature: The Test Cases # features/features/Test_Cases/Test_Cases.feature:1
+
+  Scenario: User can navigate to Test Cases page                            # features/features/Test_Cases/Test_Cases.feature:3
+    Given I have navigated to the main page                                 # common/given.py:12
+    When I click on the TEST_CASES button                                   # features/steps/Test_Cases/Test_Cases.py:13
+    Then The page titled "Test Cases – Automation Practice Site" has loaded # common/then.py:12
+
+1 feature passed, 0 failed, 0 skipped
+1 scenario passed, 0 failed, 0 skipped
+3 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m25.625s
